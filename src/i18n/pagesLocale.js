@@ -310,7 +310,7 @@ export const pagesByLang = {
     organizing_services: organizingServicesAr,
     contact_title: "تواصل معنا",
     contact_lead:
-      "رحلتك تبدأ من هنا! تواصل معنا ودع فريق لاست ستوب يصمّم لك تجربة سفر لا تُنسى.",
+      "رحلتك تبدأ من هنا! تواصل معنا ودع فريق لاست ستوب يصمّم لك تجربة لا تُنسى.",
     contact_channels: "يمكنكم التواصل معنا عبر:",
     contact_phone_lbl: "رقم الهاتف",
     contact_email_lbl: "البريد الإلكتروني",

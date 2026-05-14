@@ -146,18 +146,29 @@ export default function AdventureDetails() {
       {/* LIGHTBOX */}
       {open && (
         <div
-          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/95 flex items-center justify-center z-[999999]"
           onClick={() => setOpen(false)}
         >
 
           {/* CLOSE */}
-          <button
-            onClick={() => setOpen(false)}
-            className="absolute top-5 right-5 text-white text-3xl hover:scale-110 transition"
-          >
-            ✖
-          </button>
-
+        {/* CLOSE */}
+<button
+  onClick={() => setOpen(false)}
+  className="
+    fixed top-4 right-4
+    z-[99999]
+    bg-black/60
+    hover:bg-black
+    text-white
+    w-10 h-10
+    rounded-full
+    flex items-center justify-center
+    text-xl
+    transition
+  "
+>
+  ✕
+</button>
           {/* AUTO PLAY TOGGLE */}
           <button
             onClick={(e) => {

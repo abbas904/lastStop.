@@ -19,12 +19,13 @@ import AreaDetails from "./pages/AreaDetails";
 import Terms from "./components/Terms";
 import Privacy from "./components/Privacy";
 import BookingCancel from "./components/BookingCancel";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Navbar />
-
+   <ScrollToTop/>
       <Routes>
 
         {/* HOME */}

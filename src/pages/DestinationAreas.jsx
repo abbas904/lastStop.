@@ -68,10 +68,10 @@ export default function DestinationAreas() {
               <div className="overflow-hidden w-full ">
                 <img
                   src={area.img}
-                  onClick={() => openModal(index)}
+                
                   className="
                     w-full h-40 sm:h-48 md:h-56
-                    object-cover cursor-pointer
+                    object-cover 
                     hover:scale-110 transition duration-500
                     
                   "

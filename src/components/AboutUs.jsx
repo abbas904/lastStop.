@@ -4,7 +4,7 @@ import useTranslation from "../i18n/useTranslation";
 import aboutImg from "../assets/about/bg.jpg";
 import leader from "../assets/about/leader.jpg";
 
-import logo7 from "../assets/about/logo7.jpg";
+import logo8 from "../assets/about/logo8.jpeg";
 import logo2 from "../assets/about/logo2.png";
 import logo3 from "../assets/about/logo3.png";
 import logo4 from "../assets/about/logo4.png";
@@ -110,7 +110,7 @@ const AboutUs = () => {
           <div className="flex justify-center items-center gap-3 sm:gap-4 md:gap-6 flex-wrap">
             <LogoCard logo={logo4} />
             <LogoCard logo={logo3} />
-            <LogoCard logo={logo7} isBig={true} />
+            <LogoCard logo={logo8} isBig={true} />
           </div>
 
         </div>

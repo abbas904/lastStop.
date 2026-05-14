@@ -10,23 +10,9 @@ import useTranslation from "../i18n/useTranslation";
 export default function Home() {
   const { t } = useTranslation();
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+ 
 
-useEffect(() => {
-  const handleScroll = () => {
-    setShowScrollTop(window.scrollY > 400);
-  };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 const baseLink =
   "flex items-center gap-1 text-[#0c0c0c] hover:text-orange-500 text-[18px] whitespace-nowrap transition-all duration-200";
   return (
@@ -68,14 +54,7 @@ const baseLink =
 </div>
 
 </div>
-{showScrollTop && (
-  <button
-    onClick={scrollToTop}
-    className="fixed bottom-20 right-13 z-50 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300"
-  >
-    <FaArrowUp />
-  </button>
-)}
+
       <Navbar />
       <HeroSection />
       <AboutUs/>

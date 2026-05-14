@@ -179,35 +179,108 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <div className="md:hidden px-5 py-4 flex flex-col gap-3 border-t bg-white">
+  <div className="md:hidden px-5 py-4 flex flex-col gap-3 border-t bg-white">
 
-          <NavLink to="/" className={baseLink}>{t("home")}</NavLink>
+    <NavLink
+      to="/"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("home")}
+    </NavLink>
 
-          <details>
-            <summary className={baseLink + " cursor-pointer"}>{t("travel")}</summary>
-            <div className="pl-4 flex flex-col">
-              <NavLink to="/destinations?type=saudi" className={baseLink}>{t("travel_inside")}</NavLink>
-              <NavLink to="/destinations?type=international" className={baseLink}>{t("travel_international")}</NavLink>
-            </div>
-          </details>
+    <details>
+      <summary className={baseLink + " cursor-pointer"}>{t("travel")}</summary>
+      <div className="pl-4 flex flex-col">
+        <NavLink
+          to="/destinations?type=saudi"
+          className={baseLink}
+          onClick={() => setIsOpen(false)}
+        >
+          {t("travel_inside")}
+        </NavLink>
 
-          <details>
-            <summary className={baseLink + " cursor-pointer"}>{t("adventures")}</summary>
-            <div className="pl-4 flex flex-col">
-              <NavLink to="/adventures/wild" className={baseLink}>{t("adventures_wild")}</NavLink>
-              <NavLink to="/adventures/sea" className={baseLink}>{t("adventures_sea")}</NavLink>
-            </div>
-          </details>
+        <NavLink
+          to="/destinations?type=international"
+          className={baseLink}
+          onClick={() => setIsOpen(false)}
+        >
+          {t("travel_international")}
+        </NavLink>
+      </div>
+    </details>
 
-          <NavLink to="/entertainment" className={baseLink}>{t("entertainment")}</NavLink>
-          <NavLink to="/organizing-conferences" className={baseLink}>{t("organizing_conferences")}</NavLink>
-          <NavLink to="/cars" className={baseLink}>{t("cars")}</NavLink>
-          <NavLink to="/valet" className={baseLink}>{t("valetServices")}</NavLink>
-          <NavLink to="/gallery" className={baseLink}>{t("gallery")}</NavLink>
-          <NavLink to="/contact" className={baseLink}>{t("contact")}</NavLink>
+    <details>
+      <summary className={baseLink + " cursor-pointer"}>{t("adventures")}</summary>
+      <div className="pl-4 flex flex-col">
+        <NavLink
+          to="/adventures/wild"
+          className={baseLink}
+          onClick={() => setIsOpen(false)}
+        >
+          {t("adventures_wild")}
+        </NavLink>
 
-        </div>
-      )}
+        <NavLink
+          to="/adventures/sea"
+          className={baseLink}
+          onClick={() => setIsOpen(false)}
+        >
+          {t("adventures_sea")}
+        </NavLink>
+      </div>
+    </details>
+
+    <NavLink
+      to="/entertainment"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("entertainment")}
+    </NavLink>
+
+    <NavLink
+      to="/organizing-conferences"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("organizing_conferences")}
+    </NavLink>
+
+    <NavLink
+      to="/cars"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("cars")}
+    </NavLink>
+
+    <NavLink
+      to="/valet"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("valetServices")}
+    </NavLink>
+
+    <NavLink
+      to="/gallery"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("gallery")}
+    </NavLink>
+
+    <NavLink
+      to="/contact"
+      className={baseLink}
+      onClick={() => setIsOpen(false)}
+    >
+      {t("contact")}
+    </NavLink>
+
+  </div>
+)}
     </nav>
   );
 }
