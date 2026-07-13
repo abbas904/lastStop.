@@ -4,7 +4,7 @@ import useTranslation from "../i18n/useTranslation";
 import aboutImg from "../assets/about/bg.jpg";
 import leader from "../assets/about/leader.jpg";
 
-import logo8 from "../assets/about/logo8.jpeg";
+import logo8 from "../assets/about/main1_cropped.png";
 import logo2 from "../assets/about/logo2.png";
 import logo3 from "../assets/about/logo3.png";
 import logo4 from "../assets/about/logo4.png";
@@ -27,7 +27,7 @@ const LogoCard = ({ logo, isBig = false }) => (
       src={logo}
       alt="logo"
       className={`object-contain transition-all duration-300 ${
-        isBig ? "w-[130%] h-[130%]" : "w-full h-full"
+      isBig ? "w-[130%] h-[130%]" : "w-full h-full"
       }`}
     />
   </div>
@@ -101,16 +101,14 @@ const AboutUs = () => {
         {/* LOGOS */}
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-4 sm:gap-6">
 
-          {/* اللوغو الكبير في المنتصف */}
-          <div className="flex justify-center">
-            <LogoCard logo={logo2} />
-          </div>
+         
 
           {/* باقي اللوغوهات */}
           <div className="flex justify-center items-center gap-3 sm:gap-4 md:gap-6 flex-wrap">
-            <LogoCard logo={logo4} />
+          <LogoCard logo={logo8} isBig={true} />
             <LogoCard logo={logo3} />
-            <LogoCard logo={logo8} isBig={true} />
+              <LogoCard logo={logo4} />
+            
           </div>
 
         </div>

@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <Link to="/" className="flex-shrink-0">
-          <img src="/logo.png" className="h-16 w-16 object-contain" />
+          <img src="/main3-remove.png" className="h-16 lg:h-20 w-auto object-contain" />
         </Link>
 
         {/* NAV CENTER */}

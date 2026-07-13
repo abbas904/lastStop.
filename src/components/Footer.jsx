@@ -164,7 +164,7 @@ export default function Footer() {
                   icon: instgramtIcon,
                 },
                 {
-                  href: "https://www.instagram.com/laststop.ksa/",
+                  href: "https://www.instagram.com/laststopexperiences?utm_source=qr",
                   icon: instgramtIcon,
                 },
                 {
@@ -205,7 +205,7 @@ export default function Footer() {
 
               {/* YouTube */}
               <a
-                href="https://www.youtube.com/@LastStopElite"
+                href="https://www.youtube.com/@laststopgroup"
                 target="_blank"
                 rel="noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 flex items-center justify-center rounded-full bg-red-600 text-white hover:scale-110 transition-all duration-300"

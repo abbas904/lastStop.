@@ -15,7 +15,7 @@ import AdventureDetails from "./pages/AdventureDetails";
 import Destinations from "./pages/Destinations";
 import DestinationAreas from "./pages/DestinationAreas";
 import AreaDetails from "./pages/AreaDetails";
-
+import FloatingButtons from "./components/FloatingButtons";
 import Terms from "./components/Terms";
 import Privacy from "./components/Privacy";
 import BookingCancel from "./components/BookingCancel";
@@ -55,6 +55,7 @@ function App() {
         <Route path="/booking-cancel" element={<BookingCancel />} />
 
       </Routes>
+       <FloatingButtons />
     </>
   );
 }
