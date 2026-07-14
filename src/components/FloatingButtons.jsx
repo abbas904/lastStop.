@@ -21,8 +21,8 @@ export default function FloatingButtons() {
         "
       >
         <span className="text-[11px] sm:text-sm md:text-base font-semibold whitespace-nowrap">
-          للدعم والاستفسار
-        </span>
+  {t("pages.support_inquiry")}
+</span>
 
         <i className="fab fa-whatsapp text-lg sm:text-2xl"></i>
       </a>
@@ -40,10 +40,9 @@ export default function FloatingButtons() {
             transition-all duration-300
           "
         >
-          <span className="bg-orange-500 text-white text-[9px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full">
-            للحجز
-          </span>
-
+        <span className="bg-orange-500 text-white text-[9px] sm:text-xs font-bold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-full">
+  {t("pages.booking_badge")}
+</span>
           <span className="text-[11px] sm:text-sm md:text-base text-white whitespace-nowrap font-medium">
             {t("pages.home_float_cta")}
           </span>

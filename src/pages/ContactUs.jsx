@@ -93,7 +93,7 @@ const ContactUs = () => {
 
     {/* Instagram 1 */}
     <a
-      href="https://www.instagram.com/laststop.ksa/"
+      href="https://www.instagram.com/laststopexperiences?utm_source=qr"
       target="_blank"
       rel="noreferrer"
       className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center hover:scale-110 transition"

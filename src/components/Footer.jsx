@@ -3,7 +3,7 @@ import snapchatIcon from "../assets/contactus/snapchat.svg";
 import instgramtIcon from "../assets/contactus/instagram.svg";
 import { FaYoutube } from "react-icons/fa";
 import { useState } from "react";
-
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaPhone,
   FaEnvelope,
@@ -13,8 +13,6 @@ import {
   FaTiktok,
   FaTwitter,
 } from "react-icons/fa";
-
-import { Link } from "react-router-dom";
 
 import qr from "../assets/footer/barkod.jpg";
 
@@ -26,7 +24,7 @@ import at from "../assets/footer/AT.jpg";
 
 export default function Footer() {
   const { t } = useTranslation();
-  const [showPayment, setShowPayment] = useState(false);
+  const navigate = useNavigate();
   const links = [
     { label: t("terms"), path: "/terms", icon: FaPhone },
     { label: t("privacy"), path: "/privacy", icon: FaEnvelope },
@@ -42,10 +40,8 @@ export default function Footer() {
       <hr className="border-black mb-6 sm:mb-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-
         {/* GRID: موبايل عمودين، تابلت 3، ديسكتوب 5 */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-10 items-start">
-
           {/* PAYMENTS */}
           <div>
             <h2 className="text-sm sm:text-base lg:text-xl font-bold mb-3 sm:mb-4 text-black">
@@ -55,7 +51,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2 sm:gap-3 items-start">
               <img
                 src={pay1}
-                onClick={() => setShowPayment(true)}
+                onClick={() => navigate("/error")}
                 className="w-16 sm:w-20 lg:w-28 object-contain cursor-pointer hover:scale-105 transition"
                 alt="payment 1"
               />
@@ -73,37 +69,52 @@ export default function Footer() {
           </div>
 
           {/* GUIDE */}
-          <div className="mb-6 sm:mb-10 w-full">
-            <h2 className="text-sm sm:text-base lg:text-xl font-bold mb-3 sm:mb-6 text-black">
-              {t("pages.footer_guide_title")}
-            </h2>
+        <div className="mb-6 sm:mb-10 w-full">
+  
 
-            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm lg:text-base text-gray-600">
-              <div>
-                <p className="text-gray-900">
-                  <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
-                    {t("pages.footer_name_label")}
-                  </span>{" "}
-                  {t("pages.footer_guide_name")}
-                </p>
+  <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm lg:text-base text-gray-600">
+    <p className="text-gray-900">
+      <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
+        {t("pages.footer_commercial_register_label")}
+      </span>{" "}
+      7025517793
+    </p>
 
-                <p className="text-gray-900">
-                  <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
-                    {t("pages.footer_license_label")}
-                  </span>{" "}
-                  40002089
-                </p>
-              </div>
+    <p className="text-gray-900">
+      <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
+        {t("pages.footer_trip_license_label")}
+      </span>{" "}
+      73105437
+    </p>
 
-              <p className="text-gray-600 font-sans text-xs sm:text-sm lg:text-base">
-                <span className="font-bold text-gray-700">
-                  {t("pages.footer_crowd_label")}
-                </span>{" "}
-                2604130104
-              </p>
-            </div>
-          </div>
+    <p className="text-gray-900">
+      <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
+        {t("pages.footer_crowd_label")}
+      </span>{" "}
+      2604130104
+    </p>
 
+    <div className="pt-2 border-t border-gray-200">
+   <p className="text-gray-700 text-sm sm:text-base lg:text-base mt-3">
+  {t("pages.footer_guide_title")}
+</p>
+
+<p className="text-gray-900">
+  <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
+    {t("pages.footer_name_label")}
+  </span>{" "}
+  {t("pages.footer_guide_name")}
+</p>
+
+<p className="text-gray-900">
+  <span className="font-bold text-gray-700 text-xs sm:text-sm lg:text-base">
+    {t("pages.footer_license_label")}
+  </span>{" "}
+  40002089
+</p>
+    </div>
+  </div>
+</div>
           {/* MEMBERS */}
           <div>
             <h2 className="text-sm sm:text-base lg:text-lg font-bold mb-3 sm:mb-4 text-black">
@@ -214,7 +225,6 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -224,61 +234,7 @@ export default function Footer() {
         {t("pages.footer_copyright")}
       </div>
 
-      {/* Payment Modal */}
-      {showPayment && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
-          <div className="bg-white rounded-3xl p-5 sm:p-6 w-full max-w-sm sm:max-w-md relative shadow-2xl">
-            {/* close button */}
-            <button
-              onClick={() => setShowPayment(false)}
-              className="absolute top-3 left-3 text-gray-500 hover:text-black text-2xl"
-            >
-              ×
-            </button>
-
-            <h2 className="text-sm sm:text-base md:text-xl font-bold mb-3 sm:mb-4 text-black leading-snug break-words pt-4">
-              {t("pages.footer_card_title")}
-            </h2>
-
-            <form className="space-y-3 sm:space-y-4">
-              <input
-                type="text"
-                placeholder={t("pages.footer_card_holder_ph")}
-                className="w-full border rounded-xl p-2.5 sm:p-3 text-sm sm:text-base outline-none focus:border-orange-400"
-              />
-
-              <input
-                type="text"
-                placeholder={t("pages.footer_card_number_ph")}
-                maxLength={19}
-                className="w-full border rounded-xl p-2.5 sm:p-3 text-sm sm:text-base outline-none focus:border-orange-400"
-              />
-
-              <div className="flex gap-2 sm:gap-3">
-                <input
-                  type="text"
-                  placeholder="MM/YY"
-                  className="w-1/2 border rounded-xl p-2.5 sm:p-3 text-sm sm:text-base outline-none focus:border-orange-400"
-                />
-
-                <input
-                  type="text"
-                  placeholder="CVV"
-                  maxLength={4}
-                  className="w-1/2 border rounded-xl p-2.5 sm:p-3 text-sm sm:text-base outline-none focus:border-orange-400"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2.5 sm:py-3 text-sm sm:text-base rounded-xl transition"
-              >
-                {t("pages.footer_card_submit")}
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
+     
     </footer>
   );
 }

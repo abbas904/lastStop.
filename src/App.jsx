@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
+import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
 import TravelTourism from "./pages/TravelTourism";
 import Entertainment from "./pages/Entertainment";
@@ -32,6 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* MAIN PAGES */}
+        <Route path="/error" element={<ErrorPage />} />
         <Route path="/travel" element={<TravelTourism />} />
         <Route path="/entertainment" element={<Entertainment />} />
         <Route path="/cars" element={<CarRental />} />
